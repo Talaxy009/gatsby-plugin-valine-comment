@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "jsx": "react",
+    "target": "ESNext",
+    "outDir": "./dist",
+    "declarationDir": "./dist",
+    "lib": ["es2016", "dom"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "node"
+  },
+  "include": [
+    "./src/*"
+  ]
+}
