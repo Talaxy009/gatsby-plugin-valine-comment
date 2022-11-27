@@ -37,6 +37,10 @@ export type ValineProps = Partial<
 		>
 >;
 
+/**
+ * Valine component
+ * @returns React Element
+ */
 export default function Valine(props: ValineProps): React.ReactElement {
 	const ref = React.useRef(null);
 	const others = {};
@@ -59,5 +63,6 @@ export default function Valine(props: ValineProps): React.ReactElement {
 		}
 	}, [props, ref]);
 
+	// other props will transfer to div
 	return <div ref={ref} {...others} />;
 }
