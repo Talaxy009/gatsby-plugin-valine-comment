@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-valine-comment",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Yet another Gatsby plugin for Valine comment system",
   "main": "./dist/index.js",
   "scripts": {
