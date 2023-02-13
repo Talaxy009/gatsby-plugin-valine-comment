@@ -69,26 +69,27 @@ After that, you should be able to add and see comments on your website.
 
 ## 🔧 Options
 
-| Name           | Type      | Default                            | Description                                            |
-| -------------- | --------- | ---------------------------------- | ------------------------------------------------------ |
-| appId          | `string`  | `null`                             | Application appId from Leancloud                       |
-| appKey         | `string`  | `null`                             | Application appKey from Leancloud                      |
-| placeholder    | `string`  | `Just go go`                       | Comment box placeholders                               |
-| path           | `string`  | `window.location.pathname`         | Article path(just like duoshuo thread)                 |
-| avatar         | `string`  | `mp`                               | Avatar, <https://valine.js.org/en/avatar.html>         |
-| meta           | `array`   | `['nick','mail','link']`           | Reviewer attributes                                    |
-| pageSize       | `bumber`  | `10`                               | Number of pages per page                               |
-| lang           | `string`  | `zh-CN`                            | Multilingual support                                   |
-| langMode       | `object`  | `null`                             | Custom language, <https://valine.js.org/en/i18n.html>  |
-| visitor        | `boolean` | `false`                            | Article reading statistics                             |
-| highlight      | `boolean` | `true`                             | Code highlighting                                      |
-| avatarForce    | `boolean` | `false`                            | Each time you access forced pulls the latest avatar    |
-| recordIP       | `boolean` | `false`                            | Record reviewer IP                                     |
-| serverURLs     | `string`  | `http[s]://[tab/us].avoscloud.com` | For domestic custom domain name users                  |
-| emojiCDN       | `string`  |                                    | Emoji Pack CDN, <https://valine.js.org/en/emoji.html>  |
-| emojiMaps      | `object`  | `null`                             | Emoji Packet Mapping                                   |
-| enableQQ       | `boolean` | `false`                            | Whether to automatically get QQ Nickname and QQ Avatar |
-| requiredFields | `array`   | `[]`                               | Set required fields, default anonymous                 |
+| Name           | Type      | Default                            | Description                                              |
+| -------------- | --------- | ---------------------------------- | -------------------------------------------------------- |
+| appId          | `string`  | `null`                             | Application appId from Leancloud                         |
+| appKey         | `string`  | `null`                             | Application appKey from Leancloud                        |
+| placeholder    | `string`  | `Just go go`                       | Comment box placeholders                                 |
+| path           | `string`  | `window.location.pathname`         | Article path(just like duoshuo thread)                   |
+| pure           | `boolean` | `false`                            | If true, plugin will build valine without default styles |
+| avatar         | `string`  | `mp`                               | Avatar, <https://valine.js.org/en/avatar.html>           |
+| meta           | `array`   | `['nick','mail','link']`           | Reviewer attributes                                      |
+| pageSize       | `bumber`  | `10`                               | Number of pages per page                                 |
+| lang           | `string`  | `zh-CN`                            | Multilingual support                                     |
+| langMode       | `object`  | `null`                             | Custom language, <https://valine.js.org/en/i18n.html>    |
+| visitor        | `boolean` | `false`                            | Article reading statistics                               |
+| highlight      | `boolean` | `true`                             | Code highlighting                                        |
+| avatarForce    | `boolean` | `false`                            | Each time you access forced pulls the latest avatar      |
+| recordIP       | `boolean` | `false`                            | Record reviewer IP                                       |
+| serverURLs     | `string`  | `http[s]://[tab/us].avoscloud.com` | For domestic custom domain name users                    |
+| emojiCDN       | `string`  |                                    | Emoji Pack CDN, <https://valine.js.org/en/emoji.html>    |
+| emojiMaps      | `object`  | `null`                             | Emoji Packet Mapping                                     |
+| enableQQ       | `boolean` | `false`                            | Whether to automatically get QQ Nickname and QQ Avatar   |
+| requiredFields | `array`   | `[]`                               | Set required fields, default anonymous                   |
 
 For more detail, see <https://valine.js.org/en/configuration.html>
 

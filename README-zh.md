@@ -73,6 +73,7 @@ yarn add gatsby-plugin-valine-comment
 | appKey         | `string`  | `null`                             | Leancloud 的 appKey                            |
 | placeholder    | `string`  | `Just go go`                       | 评论框占位                                     |
 | path           | `string`  | `window.location.pathname`         | 当前文章页路径，用于区分不同的文章页           |
+| pure           | `boolean` | `false`                            | 为 `true` 时插件会构建无样式的 valine 组件     |
 | avatar         | `string`  | `mp`                               | 头像，<https://valine.js.org/avatar.html>      |
 | meta           | `array`   | `['nick','mail','link']`           | 评论者相关属性                                 |
 | pageSize       | `bumber`  | `10`                               | 评论者相关属性                                 |
