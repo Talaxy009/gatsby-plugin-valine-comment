@@ -5,7 +5,8 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",
-    "clean": "del-cli dist/*"
+    "clean": "del-cli dist/*",
+    "publish": "yarn publish"
   },
   "repository": {
     "type": "git",
