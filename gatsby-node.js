@@ -9,6 +9,11 @@ exports.pluginOptionsSchema = ({Joi}) => {
 		path: Joi.string().description(
 			'Article path(just like duoshuo thread).',
 		),
+		pure: Joi.boolean()
+			.default(false)
+			.description(
+				'For custom styles. If true, plugin will build valine without default styles.',
+			),
 		avatar: Joi.string().valid(
 			'',
 			'mp',

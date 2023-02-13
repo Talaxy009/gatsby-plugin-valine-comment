@@ -1,4 +1,4 @@
-import Valine from "./valine";
+import Valine from './valine';
 
 export interface ValineOptions {
 	el: string | HTMLElement;
@@ -6,6 +6,7 @@ export interface ValineOptions {
 	appKey: string;
 	placeholder?: string;
 	path?: string;
+	pure?: boolean; // For plugin
 	avatar?:
 		| ''
 		| 'mp'
@@ -30,7 +31,15 @@ export interface ValineOptions {
 	requiredFields?: ['nick'] | ['nick', 'mail'];
 }
 
-export default Valine
+export type ValineProps = Partial<
+	Omit<ValineOptions, 'el'> &
+		React.DetailedHTMLProps<
+			React.HTMLAttributes<HTMLDivElement>,
+			HTMLDivElement
+		>
+>;
+
+export default Valine;
 
 declare global {
 	interface Window {

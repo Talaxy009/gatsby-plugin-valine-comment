@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type {ValineOptions} from '.';
+import type {ValineOptions, ValineProps} from '.';
 
 const valineOptions = [
 	'el',
@@ -8,6 +8,7 @@ const valineOptions = [
 	'appKey',
 	'placeholder',
 	'path',
+	'pure', // For plugin
 	'avatar',
 	'meta',
 	'pageSize',
@@ -29,13 +30,10 @@ const buildValine = async (options: Partial<ValineOptions>) => {
 	new RealValine(options);
 };
 
-export type ValineProps = Partial<
-	Omit<ValineOptions, 'el'> &
-		React.DetailedHTMLProps<
-			React.HTMLAttributes<HTMLDivElement>,
-			HTMLDivElement
-		>
->;
+const buildPureValine = async (options: Partial<ValineOptions>) => {
+	const RealValine = (await import('valine/dist/Valine.Pure.min')).default;
+	new RealValine(options);
+};
 
 /**
  * Valine component
@@ -52,14 +50,20 @@ export default function Valine(props: ValineProps): React.ReactElement {
 	}
 
 	React.useEffect(() => {
-		const valineOptions = window.valineOptions;
+		const options = {...window.valineOptions, ...props};
 
 		if (ref.current) {
-			buildValine({
-				...valineOptions,
-				...props,
-				el: ref.current,
-			});
+			if (options.pure) {
+				buildPureValine({
+					...options,
+					el: ref.current,
+				});
+			} else {
+				buildValine({
+					...options,
+					el: ref.current,
+				});
+			}
 		}
 	}, [props, ref]);
 
